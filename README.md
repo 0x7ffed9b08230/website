@@ -1,100 +1,32 @@
-<h1 align="center">repo-template</h1>
+<h1 align="center">Website</h1>
 
-This template is used to create a new repository with a predefined structure and files.
+This is my personal website. It is built using [Nuxt.js](https://nuxtjs.org/), a Vue.js framework. The website is hosted on [Vercel](https://vercel.com/).
 
-## Table of Contents
+## Development
 
-- [Usage](#usage)
-- [Features](#features)
-- [File Structure](#file-structure)
-- [Contributing](#contributing)
-- [License](#license)
+To run the website locally, you need to have [Node.js](https://nodejs.org/) installed. Then, you can run the following commands:
 
-## Usage
+```bash
+# Install dependencies
+$ npm install
 
-To create a new repository using this template, follow these steps:
+# Create a .env file with the following content
+# GITHUB_USER=your_github_username
+# GITHUB_TOKEN=your_github_token
+# RECAPTCHA_SECRET=your_recaptcha_secret
+# EMAIL_USER=your_email_user
+# EMAIL_PASS=your_email_pass
+# EMAIL_HOST=your_website_ip (e.g. 192.168.0.12)
 
-1. Click the "Use this template" button on the main page of the repository.
-2. Fill in the necessary details for your new repository.
-3. Click "Create repository from template".
-
-You now have a new repository initialized with the predefined structure and files from this template.
-
-## Features
-
-- Standard directory structure
-- Example configuration files
-- GitHub workflows for dependency review and managing stale issues
-- Contribution guidelines and code of conduct
-
-## File Structure
-
-The template repository includes the following structure:
-
-```plaintext
-repo-template/
-├── docs/
-│   └── index.md
-├── .github/
-│   ├── CODE_OF_CONDUCT.md
-│   ├── COMMIT_CONVENTION.md
-│   ├── CONTRIBUTING.md
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   └── workflows/
-│       ├── dependency-review.yml
-│       └── stale.yml
-│   └── ISSUE_TEMPLATE/
-│       ├── bug_report.yml
-│       ├── feature_request.yml
-│       ├── general_inquiry.yml
-│       └── config.yml
-├── LICENSE
-├── README.md
-└── .gitignore
+# Run the website
+$ sudo npm run dev # or open cmd as administrator and run npm run dev
 ```
 
-<details><summary>Expand file structure</summary>
+The website will be available at `http://localhost`.
 
-- `docs/`: Contains the documentation files for the repository.
-
-  - `index.md`: Main documentation file.
-
-- `.github/`: Contains the GitHub-specific files for the repository.
-
-  - `CODE_OF_CONDUCT.md`: Code of conduct for the repository.
-  - `COMMIT_CONVENTION.md`: Commit message convention for the repository.
-  - `CONTRIBUTING.md`: Contribution guidelines for the repository.
-  - `PULL_REQUEST_TEMPLATE.md`: Pull request template for the repository.
-  - `workflows/`: Contains the GitHub workflows for the repository.
-    - `dependency-review.yml`: Workflow for dependency review.
-    - `stale.yml`: Workflow for managing stale issues.
-  - `ISSUE_TEMPLATE/`: Contains the issue templates for the repository.
-    - `bug_report.yml`: Bug report template.
-    - `feature_request.yml`: Feature request template.
-    - `general_inquiry.yml`: General inquiry template.
-    - `config.yml`: Configuration file for the issue templates.
-
-- `LICENSE`: License file for the repository.
-- `README.md`: Readme file for the repository.
-- `.gitignore`: Git ignore file for the repository.
-</details>
-
-## Contributing
-
-We welcome contributions! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Make your changes.
-4. Commit your changes (`git commit -m "feat(feature-name): add new feature"'`).
-5. Push to the branch (`git push origin feature/YourFeature`).
-6. Create a new Pull Request.
-
-Please ensure your pull request adheres to the [Code of Conduct](./.github/CODE_OF_CONDUCT.md).
 
 ## License
 
-This project is licensed under the CC0 1.0 License. See the [LICENSE](./LICENSE) file for details.
 
 
 

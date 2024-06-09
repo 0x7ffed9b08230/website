@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blog-content h1 a,
+.blog-content h2 a,
+.blog-content h3 a,
+.blog-content h4 a,
+.blog-content h5 a,
+.blog-content h6 a {
+	text-decoration: none;
+}
+
+
+.blog-content h1 a:before,
+.blog-content h2 a:before,
+.blog-content h3 a:before,
+.blog-content h4 a:before,
+.blog-content h5 a:before,
+.blog-content h6 a:before {
+    content: "#";
+    font-size: 0.8em;
+    margin-right: 0.5em;
+    color: #0cf803;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+
+.about-me hr {
+   display: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.waving-hand {
+    /* Create a waving hand */
+    animation: wave 2.5s infinite;
+
+    /* Make the hand look like it's waving */
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+.waving-hand:hover {
+    animation-play-state: paused;
+}
+
+.waving-hand::before {
+    content: "👋";
+}
+
+/* Keyframes for the waving animation */
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
