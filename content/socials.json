@@ -18,5 +18,10 @@
         "name": "Discord",
         "url": "https://discord.com/users/1248626823638552701",
         "icon": "discord"
+    },
+    {
+        "name": "Twitter",
+        "url": "https://x.com/0x7ffed9b08230",
+        "icon": "twitter"
     }
 ]
