@@ -52,7 +52,6 @@ useHead({
 });
 
 useSeoMeta({
-    title: "Hayden - Developer",
     description: "I do Software Development, Web Development, and Cybersecurity. I am a Full Stack Developer and a Cybersecurity Enthusiast.",
 
     twitterCard: 'summary_large_image',
