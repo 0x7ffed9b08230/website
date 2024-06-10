@@ -2,16 +2,17 @@
 import { initFlowbite } from 'flowbite'
 import type { IDeveloper } from '~/interfaces/IDeveloper';
 import jQuery from 'jquery';
+import { seoKeywords } from './keys/seoKeywords';
 
 useHead({
     meta: [
         {
             name: "description",
-            content: "“We haven’t lost yet! You lose when you’ve given up!” ~Rias Gremory"
+            content: "I do Software Development, Web Development, and Cybersecurity. I am a Full Stack Developer and a Cybersecurity Enthusiast."
         },
         {
             property: "og:description",
-            content: "“We haven’t lost yet! You lose when you’ve given up!” ~Rias Gremory"
+            content: "I do Software Development, Web Development, and Cybersecurity. I am a Full Stack Developer and a Cybersecurity Enthusiast."
         },
         {
             property: "og:image",
@@ -20,6 +21,10 @@ useHead({
         {
             property: "og:title",
             content: "Hayden - Developer",
+        },
+        {
+            property: "keywords",
+            content: seoKeywords,
         }
     ],
     noscript: [
@@ -45,6 +50,17 @@ useHead({
         },
     ],
 });
+
+useSeoMeta({
+    title: "Hayden - Developer",
+    description: "I do Software Development, Web Development, and Cybersecurity. I am a Full Stack Developer and a Cybersecurity Enthusiast.",
+
+    twitterCard: 'summary_large_image',
+    twitterImage: '/static/images/seo-banner.gif',
+    twitterSite: '@0x7ffed9b08230',
+    themeColor: '#3498db',
+    keywords: seoKeywords
+})
 
 const {
     data: infoData,
