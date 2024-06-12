@@ -25,7 +25,13 @@ export interface IRepo {
     open_issues_count: number;
     created_at: string;
     updated_at: string;
-    license: string;
+    license: {
+        name: string;
+        spdx_id: string;
+        content: string;
+    },
     html_url: string;
     image: string;
+    readme: string;
+    rel_link: string;
 }
