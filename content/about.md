@@ -9,7 +9,7 @@
 <div>
   <ul>
     <li>Software/Web Developer</li>
-    <li>Member of the LGBTQ+ Community (Bi-Sexual)</li>
+    <li>Member of the LGBTQ+ Community (Trans Women / Bi-Sexual)</li>
     <li>Furry Enthusiast</li>
     <li>Developer at <a href="https://vtubers.tv">vtubers.tv</a></li>
     <li>Currently Learning NuxtJS</li>
