@@ -33,5 +33,4 @@ export interface IRepo {
     html_url: string;
     image: string;
     readme: string;
-    rel_link: string;
 }

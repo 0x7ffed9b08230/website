@@ -190,7 +190,6 @@ export default defineEventHandler(async (event) => {
         created_at: repo.created_at,
         updated_at: repo.updated_at,
         html_url: repo.html_url,
-        rel_link: `/projects/${repo.name.replace(/ /g, "-").toLowerCase()}`,
         image: makeRepoImage(
           rawData.login,
           repo.name,
