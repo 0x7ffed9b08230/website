@@ -56,6 +56,10 @@ function formatDate(date: string) {
     return obj;
 }
 
+const readme_raw = ref<string>(repo?.readme || '');
+const readme = await marked.parse(readme_raw.value);
+
+
 if (!repo) {
     router.push('/404');
 } else {
@@ -78,13 +82,13 @@ if (!repo) {
         initFlowbite();
 
         const content = document.querySelector('.blog-content');
-        const readme_raw = ref<string>(repo?.readme || '');
+        
 
         if (!content || !readme_raw.value) {
             return;
         }
 
-        const readme = await marked.parse(readme_raw.value);
+        
         content.innerHTML = readme;
 
         const images = content.querySelectorAll('img');
@@ -159,7 +163,7 @@ function makeLicense(c: string): string {
                     </a>
                 </div>
             </header>
-            <div class="blog-content dark:text-white mt-6 text-gray-900"></div>
+            <div class="blog-content dark:text-white mt-6 text-gray-900" v-html="readme"></div>
         </article>
     </div>
 
