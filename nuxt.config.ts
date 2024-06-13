@@ -6,6 +6,7 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  ssr: true,
   modules: [
     "@nuxtjs/seo",
     "@nuxt/image",

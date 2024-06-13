@@ -40,10 +40,11 @@ __pycache__/
 coverage/
 
 # Ignore build output
-/build/
-/dist/
-/out/
-/bin/
-/lib/
-/obj/
+build/
+dist/
+out/
+bin/
+lib/
+obj/
 *.spec
+.output/
