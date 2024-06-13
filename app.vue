@@ -20,7 +20,7 @@ useHead({
         },
         {
             property: "og:title",
-            content: "Hayden - Developer",
+            content: "Stella - Developer",
         },
         {
             property: "keywords",

@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   css: ["public/static/css/style.css"],
   site: {
     url: "https://0x7ffed9b08230.dev",
-    name: "0x7ffed9b08230 - Hayden",
+    name: "0x7ffed9b08230 - Stella",
     indexable: true,
   },
   devServer: {
