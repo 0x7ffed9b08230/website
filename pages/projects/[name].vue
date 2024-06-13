@@ -103,6 +103,8 @@ if (!repo) {
 
         const readme = await marked.parse(readme_raw.value);
 
+        console.log(readme);
+
 
         content.innerHTML = readme;
 
