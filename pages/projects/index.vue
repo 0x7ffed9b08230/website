@@ -113,11 +113,11 @@ function formatDate(date: string) {
                         
                     </div>
                     <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a
-                            :href="repo.rel_link">{{ repo.name }}</a></h2>
+                            :href="repo.html_url">{{ repo.name }}</a></h2>
                     <p class="mb-5 font-light text-gray-500 dark:text-gray-400">{{ repo.description?.substring(0,
                         100).concat('...') }}</p>
                     <div class="flex justify-between items-center">
-                        <a :href="repo.rel_link"
+                        <a :href="repo.html_url"
                             class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
                             View
                             <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
