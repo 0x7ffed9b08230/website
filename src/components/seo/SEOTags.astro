@@ -1,0 +1,92 @@
+---
+import { SEO } from "astro-seo";
+import { AstroFont } from "astro-font";
+import { SITE_URL } from "@/data/config";
+import type { HeadTags } from "@/utils/types/HeadTags";
+import presentation from "@/data/presentation";
+
+type Props = HeadTags;
+
+const { title, description, noindex, og } = Astro.props;
+
+const DEFAULT_TITLE_PAGE = `${presentation.title}`
+const DEFAULT_DESCRIPTION_PAGE = `${presentation.description}`
+const DEFAULT_URL_SITE = SITE_URL;
+
+const openGraph = {
+  title: title || og?.title || DEFAULT_TITLE_PAGE,
+  type: og?.type || "website",
+  image: og?.image || "/images/seo-banner.gif",
+  alt: og?.alt || `Image for ${title || DEFAULT_TITLE_PAGE}`,
+  url: DEFAULT_URL_SITE,
+  description: og?.description || DEFAULT_DESCRIPTION_PAGE,
+};
+
+---
+
+<head>
+  <SEO
+    charset="UTF-8"
+    title={title || DEFAULT_TITLE_PAGE}
+    description={description || DEFAULT_DESCRIPTION_PAGE}
+    noindex={noindex || false}
+    openGraph={{
+      basic: {
+        title: openGraph.title,
+        type: openGraph.type,
+        image: openGraph.image,
+      },
+      image: {
+        alt: openGraph.alt,
+      },
+    }}
+    twitter={{
+      creator: "@0x7ffed9b08230",
+    }}
+    extend={{
+      link: [
+        { rel: "icon", href: "https://avatars.githubusercontent.com/u/171978943?v=4" },
+        { rel: "sitemap", href: "/sitemap-index.xml" },
+        { rel: "canonical", href: DEFAULT_URL_SITE },
+      ],
+      meta: [
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "generator", content: Astro.generator },
+        { name: "robots", content: "index, follow" },
+        { name: "theme-color", content: "#ffffff" },
+        { name: "apple-mobile-web-app-capable", content: "yes" },
+        { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
+        { name: "twitter:image", content: openGraph.image },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: openGraph.title },
+        { name: "twitter:description", content: openGraph.description },
+        { name: "twitter:site", content: "@0x7ffed9b08230" },
+        { name: "twitter:creator", content: "@0x7ffed9b08230" },
+        { name: "og:url", content: openGraph.url },
+        { name: "og:title", content: openGraph.title },
+        { name: "og:description", content: openGraph.description },
+        { name: "og:image", content: openGraph.image },
+        { name: "og:image:alt", content: openGraph.alt },
+        { name: "og:type", content: openGraph.type },
+        { name: "og:site_name", content: presentation.title },
+        { name: "og:locale", content: "en_US" },
+        { name: "og:locale:alternate", content: "en_US" },
+      ],
+    }}
+  />
+  <AstroFont
+    config={[
+      {
+        src: [],
+        preload: false,
+        display: "swap",
+        selector: "html",
+        name: "Open Sans",
+        fallback: "sans-serif",
+        cssVariable: "font-open-sans",
+        googleFontsURL:
+          "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+      },
+    ]}
+  />
+</head>

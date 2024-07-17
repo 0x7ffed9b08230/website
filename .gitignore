@@ -48,3 +48,4 @@ lib/
 obj/
 *.spec
 .output/
+.astro/
